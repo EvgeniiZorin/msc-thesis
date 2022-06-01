@@ -1,0 +1,4 @@
+diagonal	first_genotype	last_genotype	Hypercuboid_size	a(wt)	a(1)	a(2)	a(12)	Type_of_epistasis
+F1V;G3Z;S92Z:Z100A	1F:3G:92S	1V:100A	4	1	2	1	-4	reciprocal_sign;
+V1F:Z3G;Z92S	1V	1F:3G:92S	3	0	6	5	-9	reciprocal_sign;
+F1V;G3Z:S92Z;B100Z	1F:3G:92S:100B	1V	4	2	6	5	-9	reciprocal_sign;

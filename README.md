@@ -2,13 +2,15 @@
 
 ## Project description
 
-Description here. 
+Programs written during my MSc. 
 
-## Code 
+## Programs
 
-`CuboidME` - program for creating hypercubes. 
+---
 
-`Epistatic coefficients` - program for calculating 2D epistatic coefficients. 
+`CuboidME` - program which calculates hypercuboids from a given list of genotypes. 
+
+`Epistatic_coefficients_2D` - program for calculating epistatic coefficients based on a triangular matrix for hypercuboids of dimensionality d = 2. 
 
 ## Authors
 

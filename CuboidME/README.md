@@ -45,7 +45,11 @@ Test that uses outputs of the algorithm with different parameters (e.g. only fir
 Only says if each combination of parameter works; if it says that something doesn't work, you can run ```Funct_test_detailed.py``` to get a more detailed report. 
 
 ## How to use: 
-- In cmd line, please run: ```python3 CuboidME.py -i test_complete_03.txt -o test_complete_03; python3 CuboidME.py -i test_complete_03.txt -o test_complete_03_1 -hc No; python3 CuboidME.py -f test_complete_03.txt -o test_complete_03_2; python3 CuboidME.py -j test_complete_03_2/VZEM_dim1.txt -o test_complete_03_3; python3 CuboidME.py -i test_complete_irregular.txt -o test_complete_irregular```. This runs the algorithm with different parameters and puts the output files into specified folders. 
+- In cmd line, please run: 
+```py
+python3 CuboidME.py -i test_complete_03.txt -o test_compare_03_0; python3 CuboidME.py -i test_complete_03.txt -o test_compare_03_1 -hc No; python3 CuboidME.py -f test_complete_03.txt -o test_compare_03_2; python3 CuboidME.py -j test_compare_03_2/VZEM_dim1.txt -o test_compare_03_3; python3 CuboidME.py -i test_files/test_complete_irregular.txt -o test_compare_irregular
+```. 
+This runs the algorithm with different parameters and puts the output files into specified folders. 
 - Open the script and run it. The terminal output should say which parameters worked by printing a green tick mark, or didn't work by printing a red cross. 
 
 # Funct_test_detailed.py

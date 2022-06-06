@@ -26,6 +26,14 @@ Program for calculating hypercuboids from genotypes and the accompanying program
 
 ## How to use:
 *Note: use ```py -3``` or ```python3``` to run, both should work.*
+Input - 1:
+```py
+py -3 CuboidME.py
+```
+Input - 2:
+```py
+py -3 Cub
+```
 - Input - file with genotypes, find all hypercuboids: ```py -3 CuboidME.py -i test_complete_03.txt -o output_dirname```
 - Input - file with genotypes, find hypercuboids of dim = 1 ONLY: ```py -3 CuboidME.py -f test_complete_03.txt -o output_dirname```
 - Input - file with hypercuboids (dim = N), find hypercuboids of dim = N+1 ONLY: ```py -3 CuboidME.py -j output_dirname/VZEM_dimN.txt -o output_dirname```

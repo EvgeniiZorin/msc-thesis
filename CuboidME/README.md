@@ -1,6 +1,6 @@
 # CuboidME
 
-> Program for calculating hypercuboids from genotypes and the accompanying programs:
+Program for calculating hypercuboids from genotypes and the accompanying programs:
 - `CuboidME.py` - the main program for calculating hypercuboids and hyperrectangles; 
 - `Format_convert_hypercuboids.ipynb` - python notebook containing scripts to convert fitness landscape datasets into a format usable by CuboidME.py; 
 - `Func_test.py` - **main** script for functional test of CuboidME.py; 

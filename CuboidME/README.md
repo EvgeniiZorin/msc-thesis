@@ -26,18 +26,22 @@ Program for calculating hypercuboids from genotypes and the accompanying program
 
 ## How to use:
 *Note: use ```py -3``` or ```python3``` to run, both should work.*
-Input - 1:
+Input - file with genotypes, find all *hypercuboids*:
 ```py
-py -3 CuboidME.py
+py -3 CuboidME.py -i test_complete_03.txt -o outputDir
 ```
-Input - 2:
+Input - file with genotypes, find all *hyperrectangles*:
 ```py
-py -3 Cub
+py -3 CuboidME.py -i test_complete_03.txt -hc No -o outputDir
 ```
-- Input - file with genotypes, find all hypercuboids: ```py -3 CuboidME.py -i test_complete_03.txt -o output_dirname```
-- Input - file with genotypes, find hypercuboids of dim = 1 ONLY: ```py -3 CuboidME.py -f test_complete_03.txt -o output_dirname```
-- Input - file with hypercuboids (dim = N), find hypercuboids of dim = N+1 ONLY: ```py -3 CuboidME.py -j output_dirname/VZEM_dimN.txt -o output_dirname```
-- Input - file with genotypes, find all hyperrectangles: ```py -3 CuboidME.py -i test_complete_03.txt -hc No -o output_dirname```
+Input - file with genotypes, find hypercuboids of dim = 1 ONLY:
+```py
+py -3 CuboidME.py -f test_complete_03.txt -o outputDir
+```
+Input - file with hypercuboids (dim = N), find hypercuboids of dim = N+1 ONLY. E.g. if we have a file with hypercubes of dimension = 2:
+```py
+py -3 CuboidME.py -j outputDir/VZEM_dim2.txt -o outputDir
+```
 
 ## Notes:
 - *Hypercuboids = hypercubes [H=1] + hyperrectangles [H >= 1]*    
@@ -46,12 +50,11 @@ py -3 Cub
 - ```test_complete_03_custom.txt``` (modified version with 1+ mutations at each locus)
 - ```test_complete_irregular.txt``` (version for functional test of the program)
 
-
+---
 
 # Funct_test.py
 
-Test that uses outputs of the algorithm with different parameters (e.g. only first dimension, only N dimension, only hyperrectangles) and compares them with the standard output. 
-Only says if each combination of parameter works; if it says that something doesn't work, you can run ```Funct_test_detailed.py``` to get a more detailed report. 
+**Main test script**. Functional test that uses outputs of the algorithm with different parameters (e.g. only first dimension, only N dimension, only hyperrectangles) and compares them with the standard output. Only says if each combination of parameter works; if it says that something doesn't work, you can run ```Funct_test_detailed.py``` to get a more detailed report (*Note: `Func_test_detailed.py` is in beta*). 
 
 ## How to use: 
 - In cmd line, please run: 

@@ -48,7 +48,7 @@ Only says if each combination of parameter works; if it says that something does
 - In cmd line, please run: 
 ```py
 python3 CuboidME.py -i test_complete_03.txt -o test_compare_03_0; python3 CuboidME.py -i test_complete_03.txt -o test_compare_03_1 -hc No; python3 CuboidME.py -f test_complete_03.txt -o test_compare_03_2; python3 CuboidME.py -j test_compare_03_2/VZEM_dim1.txt -o test_compare_03_3; python3 CuboidME.py -i test_files/test_complete_irregular.txt -o test_compare_irregular
-```. 
+``` 
 This runs the algorithm with different parameters and puts the output files into specified folders. 
 - Open the script and run it. The terminal output should say which parameters worked by printing a green tick mark, or didn't work by printing a red cross. 
 

@@ -26,6 +26,7 @@ Program for calculating hypercuboids from genotypes and the accompanying program
 
 ## How to use:
 *Note: use ```py -3``` or ```python3``` to run, both should work.*
+
 Input - file with genotypes, find all *hypercuboids*:
 ```py
 py -3 CuboidME.py -i test_complete_03.txt -o outputDir

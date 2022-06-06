@@ -1,6 +1,6 @@
 # CuboidME
 
-Program for calculating hypercuboids from genotypes and the accompanying programs:
+> Program for calculating hypercuboids from genotypes and the accompanying programs:
 - `CuboidME.py` - the main program for calculating hypercuboids and hyperrectangles; 
 - `Format_convert_hypercuboids.ipynb` - python notebook containing scripts to convert fitness landscape datasets into a format usable by CuboidME.py; 
 - `Func_test.py` - **main** script for functional test of CuboidME.py; 
@@ -25,7 +25,7 @@ Program for calculating hypercuboids from genotypes and the accompanying program
   - ```-hc, --hypercubes``` specify 'Yes' if you want to compute hypercuboids (hypercubes + hyperrectangles), or 'No' if you want to only compute hyperrectangles. Default = 'Yes'
 
 ## How to use:
-*Note: use ```py -3``` or ```python3``` to run, both should work.*
+> *Note: use ```py -3``` or ```python3``` to run, both should work.*
 
 Input - file with genotypes, find all *hypercuboids*:
 ```py

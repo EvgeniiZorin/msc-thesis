@@ -80,21 +80,21 @@ def launch(index, start_dim, end_dim):
 		)
 	if count_of_mismatches == 0:
 		print(f"   ✅")
+		return 1
 	else:
 		print('   ❌')
+		return -1
 
 
 if __name__ == "__main__":
-	##########################################################################################
-	#####   Variables   ######################################################################
-	##########################################################################################
-
 	folder_expected = [
-		'test_expected_hypercuboids',    # index 0: input, output
-		'test_expected_hypercuboids_1',  # index 1: input, output, -hc No
-		'test_expected_hypercuboids_2',   # index 2: first, output
-		'test_expected_hypercuboids_3',   # index 3: jinput, output
-		'test_expected_hypercuboids_4'    # index 4: input, output
+		# test_complete_03 with different commands
+		'test_files/test_expected_03_0',   # index 0: input, output
+		'test_files/test_expected_03_1',   # index 1: input, output, -hc No
+		'test_files/test_expected_03_2',   # index 2: first, output
+		'test_files/test_expected_03_3',   # index 3: jinput, output
+		# test irregular
+		'test_files/test_expected_irregular'    # index 4: input, output
 	]
 	number_of_files = [
 		3, 
@@ -104,18 +104,18 @@ if __name__ == "__main__":
 		1
 	]
 	folder_to_test = [
-		'test_complete_03', 
-		'test_complete_03_1', 
-		'test_complete_03_2', 
-		'test_complete_03_3', 
-		'test_complete_irregular'
+		'test_compare_03_0', 
+		'test_compare_03_1', 
+		'test_compare_03_2', 
+		'test_compare_03_3', 
+		'test_compare_irregular'
 	]
 	commands_to_test = [
 		f'python3 CuboidME.py -i test_complete_03.txt -o {folder_to_test[0]}', 
 		f'python3 CuboidME.py -i test_complete_03.txt -o {folder_to_test[1]} -hc No', 
 		f'python3 CuboidME.py -f test_complete_03.txt -o {folder_to_test[2]}', 
 		f'python3 CuboidME.py -j {folder_to_test[2]}/VZEM_dim1.txt -o {folder_to_test[3]}', 
-		f'python3 CuboidME.py -i test_complete_irregular.txt -o {folder_to_test[4]}'
+		f'python3 CuboidME.py -i test_files/test_complete_irregular.txt -o {folder_to_test[4]}'
 	]
 
 	##########################################################################################
@@ -128,13 +128,22 @@ if __name__ == "__main__":
 			print('------------------------------------------------------------------------------------------------------')
 			# print(f'python3 CuboidME.py -i test_complete_03.txt -o {folder_to_test[0]}; python3 CuboidME.py -i test_complete_03.txt -o {folder_to_test[1]}   \n')
 			sys.exit()
+	results = []
 	# Test index 0 
-	launch(0, 1, 3)
+	# launch(0, 1, 3)
+	results.append(launch(0,1,3))
 	# Test index 1
-	launch(1, 1, 2)
+	# launch(1, 1, 2)
+	results.append(launch(1,1,2))
 	# Test index 2
-	launch(2, 1, 1)
+	# launch(2, 1, 1)
+	results.append(launch(2,1,1))
 	# Test index 3
-	launch(3, 2, 2)
+	# launch(3, 2, 2)
+	results.append(launch(3,2,2))
 	# Test index 4
-	launch(4, 1, 1)
+	# launch(4, 1, 1)
+	results.append(launch(4,1,1))
+	print('-'*100)
+	print(f'Passed: {results.count(1)}')
+	print(f'Failed: {results.count(-1)}')
